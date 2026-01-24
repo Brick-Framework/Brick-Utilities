@@ -1,7 +1,9 @@
 name: PR Quality Gate
 
 on:
-  pull_request: ["master"]
+  pull_request:
+    branches:
+      - master
 
 jobs:
   build-and-test:
