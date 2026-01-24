@@ -27,7 +27,7 @@ jobs:
       - uses: actions/checkout@v4
       
       - name: SonarQube Scan
-        uses: sonarsource/sonarqube-scan-action@master
+        run: mvn sonar:sonar -Dsonar.organization=brick-framework -Dsonar.projectKey=Brick-Framework_Brick-Utilities -Dsonar.qualitygate.wait=true
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_URL }}
