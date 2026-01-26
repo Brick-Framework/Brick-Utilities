@@ -8,29 +8,12 @@
 	<version>1.0.7</version>
 	<packaging>jar</packaging>
 
-	<profiles>
-		<profile>
-			<id>source-repo</id>
-			<distributionManagement>
-				<repository>
-					<id>github</id>
-					<name>GitHub Packages</name>
-					<url>https://maven.pkg.github.com/Brick-Framework/Brick-Maven-Registry</url>
-				</repository>
-			</distributionManagement>
-		</profile>
-
-		<profile>
-			<id>central-registry</id>
-			<distributionManagement>
-				<repository>
-					<id>github</id>
-					<name>Github Packages</name>
-					<url>https://maven.pkg.github.com/Brick-Framework/Brick-Utilities</url>
-				</repository>
-			</distributionManagement>
-		</profile>
-	</profiles>
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<url>https://maven.pkg.github.com/Brick-Framework/Brick-Utilities</url>
+		</repository>
+	</distributionManagement>
 
 	<name>com.brick.utilities</name>
 	<url>http://maven.apache.org</url>
