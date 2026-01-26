@@ -8,13 +8,29 @@
 	<version>1.0.7</version>
 	<packaging>jar</packaging>
 
-	<distributionManagement>
-		<repository>
+	<profiles>
+		<profile>
 			<id>github</id>
-			<name>GitHub Packages</name>
-			<url>https://maven.pkg.github.com/Brick-Framework/Brick-Maven-Registry</url>
-		</repository>
-	</distributionManagement>
+			<distributionManagement>
+				<repository>
+					<id>github</id>
+					<name>GitHub Packages</name>
+					<url>https://maven.pkg.github.com/Brick-Framework/Brick-Maven-Registry</url>
+				</repository>
+			</distributionManagement>
+		</profile>
+
+		<profile>
+			<id>jfrog</id>
+			<distributionManagement>
+				<repository>
+					<id>github</id>
+					<name>JFrog Artifactory</name>
+					<url>https://maven.pkg.github.com/Brick-Framework/Brick-Utilities</url>
+				</repository>
+			</distributionManagement>
+		</profile>
+	</profiles>
 
 	<name>com.brick.utilities</name>
 	<url>http://maven.apache.org</url>
