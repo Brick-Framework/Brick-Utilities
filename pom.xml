@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.brick</groupId>
-	<artifactId>com.brick.utilities</artifactId>
+	<artifactId>utilities</artifactId>
 	<version>1.0.5</version>
 	<packaging>jar</packaging>
 
@@ -12,7 +12,7 @@
 		<repository>
 			<id>github</id>
 			<name>GitHub Packages</name>
-			<url>https://maven.pkg.github.com/Brick-Framework/Brick-Utilities</url>
+			<url>https://maven.pkg.github.com/Brick-Framework/Brick-Maven-Registry</url>
 		</repository>
 	</distributionManagement>
 
