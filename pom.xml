@@ -10,7 +10,7 @@
 
 	<profiles>
 		<profile>
-			<id>github</id>
+			<id>source-repo</id>
 			<distributionManagement>
 				<repository>
 					<id>github</id>
@@ -21,11 +21,11 @@
 		</profile>
 
 		<profile>
-			<id>jfrog</id>
+			<id>central-registry</id>
 			<distributionManagement>
 				<repository>
 					<id>github</id>
-					<name>JFrog Artifactory</name>
+					<name>Github Packages</name>
 					<url>https://maven.pkg.github.com/Brick-Framework/Brick-Utilities</url>
 				</repository>
 			</distributionManagement>
