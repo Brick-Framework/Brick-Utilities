@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write # REQUIRED: Allow pushing tags and commits
+      packages: write  # Needed to upload the JAR
 
     steps:
       - uses: actions/checkout@v4
@@ -23,6 +24,7 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
           cache: 'maven'
+          server-id: github
 
       # Step 1: Compile & Enforce Coverage (Fails if < 90%)
       - name: Build & Check Coverage
