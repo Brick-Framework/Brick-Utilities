@@ -19,7 +19,7 @@ public class Config {
 
 
     
-    private static Config instance;
+    private static volatile Config instance;
 
     private BrickMap configMap;
     private Config() {
@@ -27,7 +27,6 @@ public class Config {
         try {
 			configMap = fileReader.getMap();
 		} catch (FileNotFoundException | InvalidData e) {
-			e.printStackTrace();
 			configMap = new BrickMap( new HashMap<String,Object>() ); // Creating with Empty Map
 		}
     }

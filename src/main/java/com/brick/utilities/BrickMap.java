@@ -56,8 +56,7 @@ public class BrickMap implements Iterable<Map.Entry<String, Object>> {
         	if (value instanceof Number) {
                 return Optional.of(((Number) value).doubleValue());
             }else {
-            	ClassCastException classCastException = new ClassCastException("Cannot cast : "+value+" to Double");
-            	throw classCastException;
+            	throw new ClassCastException("Cannot cast : "+value+" to Double");
             }
         }
 
