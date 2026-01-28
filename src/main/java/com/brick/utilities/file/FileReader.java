@@ -11,7 +11,7 @@ import java.io.FileNotFoundException;
 public abstract class FileReader {
     protected String fileName;
 
-    public FileReader(String fileName) {
+    protected FileReader(String fileName) {
         this.fileName = fileName;
     }
 

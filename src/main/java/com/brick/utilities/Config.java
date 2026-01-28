@@ -27,21 +27,16 @@ public class Config {
         try {
 			configMap = fileReader.getMap();
 		} catch (FileNotFoundException | InvalidData e) {
-			e.printStackTrace();
-			configMap = new BrickMap( new HashMap<String,Object>() ); // Creating with Empty Map
+			configMap = new BrickMap( new HashMap<>() ); // Creating with Empty Map
 		}
     }
     
     /*
     Singleton Pattern to Ensure Config File is read only once
      */
-    public static Config getInstance() {
+    public static synchronized Config getInstance() {
         if (instance == null) {
-            synchronized (Config.class) {
-                if (instance == null) {
-                    instance = new Config();
-                }
-            }
+            instance = new Config();
         }
         return instance;
     }
