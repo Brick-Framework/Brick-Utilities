@@ -71,7 +71,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Brick-Framework_Brick-Utilities -Dsonar.qualitygate.wait=true
    
-  release:
+  publish-package:
     needs: sonar-analysis
     runs-on: ubuntu-latest
     permissions:
